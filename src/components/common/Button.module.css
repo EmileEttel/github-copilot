@@ -1,0 +1,21 @@
+.buttonLight, .buttonDark {
+    padding: 10px 20px 10px 20px;
+    width: fit-content;
+    border-radius: 6px;
+    border: solid 1px #4f565e;
+}
+
+.buttonLight {
+    margin: 0 auto;
+    color: black;
+    background-color: white;
+}
+
+.imgDark {
+    filter: invert();
+}
+
+.imgDark, .imgLight {
+    position: relative;
+    top: 3px;
+}
