@@ -1,10 +1,35 @@
 import { useState } from 'react';
-import TerminalIntroduction from '../editor/editorIntroduction'
+import EditorTerminal from '../editor/editorTerminal'
 import Button from './button'
 import styles from './Introduction.module.css'
 
 function Header() {
-     return (
+    class Info {
+        constructor(text, color) {
+            this.text = text;
+            this.color = color;
+        }
+    }
+    class Tabs {
+        constructor(imgsrc, text) {
+            this.text = text;
+            this.imgsrc = imgsrc;
+        }
+    }
+    let pink = "#ff8ad1";
+    let purple = "#ba8ef7";
+    let green = "#5bec95";
+    let yellow = "#e7d564";
+    let blue = "#89ddff";
+    let lightgrey = "#939da5";
+    let grey = "#707a84"
+    let orange = "#ffa763";
+    const info_one = [new Info('#!/usr/bin/env ts-node\n\n', "#ff8ad1"), new Info('import', "#ba8ef7"), new Info('{ fetch }', "#939da5"), new Info('from', "#ba8ef7"), new Info('"fetch-h2";\n\n', "#5bec95")];
+    const info_two = [new Info('// Determine whether the sentiment of text is positive\n// Use a web service\n', grey), new Info('async function', purple), new Info(' isPositive', yellow), new Info('(text: ', lightgrey), new Info('string', blue), new Info('): ', lightgrey), new Info('Promise', yellow), new Info('<', lightgrey), new Info('boolean', blue), new Info('> {\n', lightgrey)];
+    const info_three = [new Info('  const ', purple), new Info('response = ', lightgrey), new Info('await ', purple), new Info('fetch', yellow), new Info('(', lightgrey), new Info('`http://text-processing.com/api/sentiment/`', green), new Info(', {\n', lightgrey), new Info('    method', orange), new Info(': ', lightgrey), new Info('"POST"', green), new Info(',\n    ', lightgrey), new Info('body', orange), new Info(': ', lightgrey), new Info('`text=', green), new Info('${text}', lightgrey), new Info('`', green), new Info(',\n    ', lightgrey), new Info('headers', orange), new Info(': {\n      ', lightgrey), new Info('"Content-Type"', green), new Info(': ', lightgrey), new Info('"application/x-www-form-urlencoded"', green), new Info(',\n    },\n  });\n  ', lightgrey), new Info('const ', purple), new Info('json = ', lightgrey), new Info('await ', purple), new Info('response.', lightgrey), new Info('json', yellow), new Info('();\n  ', lightgrey), new Info('return ', purple), new Info('json.label === ', lightgrey), new Info('"pos"', green), new Info(';\n}', lightgrey)]
+    const tabs = [new Tabs("/tslogo.svg", "sentiments.ts"), new Tabs("/gologo.svg", "write_sql.go"), new Tabs("/pylogo.svg", "parse_expenses.py"), new Tabs("/rblogo.svg", "addresses.rb")]
+
+    return (
         <section className={styles.introductionBackground}>
             <div className={styles.introduction}>
                 <div className={styles.header}>
@@ -25,7 +50,7 @@ function Header() {
                 <div className={styles.introWhiteButton}>
                     <Button title="Sign Up" hyperlink="https://github.com/features/copilot/signup" color="white" />
                 </div>
-                <TerminalIntroduction />
+                <EditorTerminal linenumber="17" info_one={info_one} info_two={info_two} info_three={info_three} tabs={tabs} />
                 <div className={styles.aiCredits}>
                     <span>Powered by</span>
                     <div className={styles.openAI}>

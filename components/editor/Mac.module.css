@@ -7,9 +7,81 @@
 
 .editorWindow {
     border-radius: 4px;
-    border: 1px solid #939da5;
+    border: 1px solid #eef1f4;
 }
 
 .editorMacBar {
-    
+    align-items: center;
+    height: 11px;
+    width: 100%;
+    display: flex;
+    padding: 4px 12px;
+    gap: 5px;
+}
+
+.redCircle, .yellowCircle, .greenCircle {
+    height: 11px;
+    width: 11px;
+    border-radius: 10000px;
+}
+
+.redCircle {
+    background-color: #ff605c
+}
+
+.yellowCircle {
+    background-color: #ffbd44;
+}
+
+.greenCircle {
+    background-color: #00ca4e;
+}
+
+.editorMacBarText {
+    width: 100%;
+    text-align: center;
+    font-family: sans-serif;
+    font-size: 12px;
+    line-height: 16px;
+}
+
+.editorTextArea {
+    display: flex;
+    border: 0px solid #eef1f4;
+    border-bottom-width: 1px;
+    border-top-width: 1px;
+}
+
+.editorSidebar {
+    display: flex;
+    flex-shrink: 0;
+    flex-direction: column;
+    background-color: #f7f9fc;
+    padding: 9.6px 12px;
+    border: 0px solid #eef1f4;
+    border-right-width: 1px;
+}
+
+.editorSidebarTop {
+    position: relative;
+    top: 0px;
+}
+
+.editorSidebarBottom {
+    position: relative;
+    bottom: 0px;
+}
+
+.editorSidebarSvgTop, .editorSidebarSvgBot, .editorSidebarSvg {
+    height: 20px;
+    width: 20px;
+    filter: invert(0.6);
+}
+
+.editorSidebarSvgTop {
+    margin-bottom: 20px;
+}
+
+.editorSidebarSvgBot {
+    margin-top: 20px;
 }
