@@ -1,17 +1,22 @@
 .buttonLight, .buttonDark {
     padding: 11.2px 16px 8px 16px;
     margin: 0;
-    border: 0 solid transparent;
     background-color: transparent;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    font-size: 14px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 0px solid #000;
+    border-right-width: 1.5px;
+}
+
+.buttonDark:focus {
+    background-color: #232a2f;
 }
 
 .sideborders {
-    border: 0px solid #000;
-    border-left-width: 1px;
+    border-top-left-radius: 12px;
 }
 
 .textDark {
@@ -26,7 +31,7 @@
 
 .divClass {
     width: fit-content;
-    height: fit-content;
+    height: fit-content;    
     padding-right: 8px;
     padding-top: 4px;
 }

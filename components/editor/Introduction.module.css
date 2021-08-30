@@ -1,0 +1,94 @@
+.editor {
+    font-size: 16px;
+    line-height: 24px;
+    height: 494px;
+    margin: 0 auto;
+    margin-bottom: 80px;
+    max-width: 960px;
+}
+
+.replayButtonDiv {
+    box-sizing: border-box;
+    height: 40px;
+    width: 100%;
+}
+
+.copilotTagDiv {
+    position: relative;
+    left: 43px;
+    height: 64px;
+    width: 2px;
+    margin-left: 12px;
+    bottom: 141px;
+}
+
+.copilotTagText {
+    padding: 7px;
+    position: relative;
+    background-color: #69b9ff;
+    top: 100%;
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+    border: solid 0 transparent;
+    border-radius: 6px;
+    border-top-left-radius: 0px;
+}
+
+.copilotTagSvg {
+    position: relative;
+    top: 100%;
+    padding-right: 4.8px;
+    padding-top: 2px;
+}
+
+.replayButton {
+    display: flex;
+    justify-items: center;
+    position: relative;
+    cursor: pointer;
+    margin: 0 auto;
+    line-height: 0;
+    height: 0px;
+    padding: 16px 16px;
+    border-radius: 16px;
+    font-weight: 500;
+    font-size: 16px;
+    color: white;
+    border: 0;
+    background-color: transparent;
+    margin-top: 20px;
+}
+
+.replayButton:active {
+    background-color:rgba(192,192,192,0.3);
+}
+
+.replaySvg {
+    position: relative;
+    bottom: 7px;
+    height: fit-content;
+    margin-right: 8px;
+    filter: invert();
+}
+
+.editorBorder {
+    border-radius: 12px;
+    border: solid 1px #000;
+    background-color: #232a2f;    
+}
+
+.exampleTabs {
+    display: flex;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    border: solid 0px #000;
+    background-color: #1a2023;
+    border-bottom-width: 1px;
+}

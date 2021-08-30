@@ -1,0 +1,15 @@
+.editorArea {
+    max-width: 960px;
+    margin: 0 auto;
+    margin-top: 32px;
+    margin-bottom: 80px;
+}
+
+.editorWindow {
+    border-radius: 4px;
+    border: 1px solid #939da5;
+}
+
+.editorMacBar {
+    
+}

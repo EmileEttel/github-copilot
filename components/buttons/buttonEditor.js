@@ -1,12 +1,12 @@
-import styles from './terminal.module.css'
+import styles from './editor.module.css'
 
-function ButtonTerminal(props) {
+function ButtonEditor(props) {
     const text = props.title;
     const logo = props.svgpath
     const buttonClass = props.theme === "light" ? styles.buttonLight : styles.buttonDark;
     const textColor = props.theme === "light" ? styles.textLight : styles.textDark;
     const svgColor = props.theme === "light" ? styles.svgLight : styles.svgDark;
-    const borderStyle = props.position === "side" ? undefined : styles.sideborders
+    const borderStyle = props.position === "side" ? styles.sideborders : undefined 
 
     return (
         <button className={`${buttonClass} + ${borderStyle}`}>
@@ -18,4 +18,4 @@ function ButtonTerminal(props) {
     )
 }
 
-export default ButtonTerminal;
+export default ButtonEditor;

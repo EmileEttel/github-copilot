@@ -1,0 +1,42 @@
+.wholeArea {
+    display: flex;
+    margin-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 16px;
+    line-height: 24px;
+    width: auto;
+    color: #939da5;
+    font-family: Cascadia Code Web,Menlo,Monaco,Consolas,Courier New;
+}
+
+.copilotText {
+
+    padding-top: 3px;
+    padding-bottom: 3px;
+    background-color: #204062;
+}
+
+.copilotLeftBorder {
+    border: solid 0 #69b9ff;
+    border-left-width: 2px;
+    position: relative;
+    left: -2px;
+}
+
+.textArea {
+    width: 909.54px;
+    white-space: pre;
+}
+
+.numArea {
+    font-family: Cascadia Code Web,Menlo,Monaco,Consolas,Courier New;
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 0;
+    width: 30px;
+    margin-right: 10px;
+}
+
+.lineStyle {
+    text-align: right;
+}

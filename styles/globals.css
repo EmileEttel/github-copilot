@@ -1,18 +1,8 @@
-@font-face {
-  font-family: "AllianceNo1";
-  src: url("/AllianceNo2.ttf");
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-}
-
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: AllianceNo1,system-ui,-apple-system,Segoe 
-  UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,BlinkMacSystemFont,Helvetica 
-  Neue,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
+  font-family:  AllianceNo1 Web,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,BlinkMacSystemFont,Helvetica Neue,Arial,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;
   box-sizing: border-box;
   border: 0 solid #e1e4e8;
 }
