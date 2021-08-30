@@ -6,7 +6,7 @@ function Button(props) {
 
     return (
         <div className={buttonClassName}>
-            <a href={props.hyperlink} target="_blank">
+            <a href={props.hyperlink}>
                     <strong>{props.title}</strong>
                     <img className={imgClassName} src="/SignUpButton.svg"/>
             </a>
