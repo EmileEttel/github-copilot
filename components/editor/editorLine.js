@@ -5,6 +5,7 @@ function EditorLine(props) {
     let linecount = 1;
     let text = []
     let i = 0;
+    let key = 0;
 
     while (linecount <= lines) {
         text[i] = linecount;
@@ -14,7 +15,7 @@ function EditorLine(props) {
     return (
         <div className={styles.numArea}>
             {text.map((paragraph) => (
-                <span className={styles.lineStyle}>{paragraph}</span>
+                <span key={key++} className={styles.lineStyle}>{paragraph}</span>
             ))}
         </div>
     )

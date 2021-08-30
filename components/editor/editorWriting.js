@@ -19,19 +19,19 @@ function EditorWriting(props) {
     let color = allcolors.split(",")
     let i = 0;
     const letters = props.letters
+    let key = 0;
 
     return (
         <>
-            {text.map((text) => (
-                <>
-                    {i++ < letters &&
-                        <span style={{ color: color[i - 1] }}>
-                            {text}
-                        </span>
-                    }
-                </>
-            ))}
-            <EditorCopilot i={i} letters={letters} info_three={props.info_three} textfull={textfull}/>
+            <span>
+                {text.map((text) => (
+                    i++ < letters &&
+                    <span key={key++} style={{ color: color[i - 1] }}>
+                        {text}
+                    </span>
+                ))}
+            </span>
+            <EditorCopilot i={i} letters={letters} info_three={props.info_three} textfull={textfull} />
         </>
     )
 }
