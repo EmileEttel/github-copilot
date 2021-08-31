@@ -7,12 +7,28 @@
     flex-wrap: nowrap;
     font-size: 16px;
     cursor: pointer;
+}
+
+.buttonLight {
+    border: 0px solid #eef1f4;
+    border-right-width: 1.5px;
+    border-color:#eef1f4;
+    color: #999999;
+}
+
+.buttonDark {
     border: 0px solid #000;
     border-right-width: 1.5px;
+    color: #565e63;
+}
+
+.buttonLight:focus {
+    color: #000;
 }
 
 .buttonDark:focus {
     background-color: #232a2f;
+    color: #939da5;
 }
 
 .sideborders {
@@ -20,9 +36,12 @@
 }
 
 .textDark {
-    color: #939da5;
     position: relative;
     bottom: 0;
+}
+
+.svgLight {
+    filter: invert(0.6);
 }
 
 .svgDark {

@@ -6,29 +6,31 @@ import { useState } from 'react';
 function EditorTerminal(props) {
     const borderStyle = props.border === "square" ? styles.borderSquare : styles.borderRound;
     const colorTheme = props.theme === "white" ? styles.whiteTheme : styles.blackTheme;
+    const exampleTabs = props.theme === "white" ? styles.whiteTabs : styles.blackTabs;
+    const replayButton = props.theme === "white" ? styles.replayButtonWhite : styles.replayButtonBlack;
     const [time, setTimeLeft] = useState(0)
-    if (time < 146) {
+    if (time < props.charsize+20) {
         setTimeout(() => {
             setTimeLeft(time + 1);
         }, 25);
     }
-    let buttonSide = 0;
+    let buttonSide = props.border === "square" ? 1 : 0;
 
 
     return (
-        <div className={styles.editor}>
-            <div className={`${styles.editorBorder} + ${borderStyle}`}>
-                <div className={styles.exampleTabs}>
+        <div className={styles.editor} style={{ height: props.height }}>
+            <div className={`${colorTheme} + ${borderStyle}`}>
+                <div className={`${exampleTabs} + ${borderStyle}`}>
                     {props.tabs.map((tabs) => (
-                        <ButtonEditor svgpath={tabs.imgsrc} title={tabs.text} position={buttonSide++} />
+                        <ButtonEditor key={buttonSide} svgpath={tabs.imgsrc} title={tabs.text} position={buttonSide++} theme={props.theme} />
                     ))}
                 </div>
-                <Editor linenumber={props.linenumber} info_one={props.info_one} info_two={props.info_two} info_three={props.info_three} letters={time} />
+                <Editor theme={props.theme} linenumber={props.linenumber} info_one={props.info_one} info_two={props.info_two} info_three={props.info_three} letters={time} segments={props.segments}/>
             </div>
-            {time >= 146 &&
+            {time >= props.charsize+20 &&
                 <>
                     <div className={styles.replayButtonDiv}>
-                        <button onClick={() => setTimeLeft(0)} className={styles.replayButton}>
+                        <button onClick={() => setTimeLeft(0)} className={replayButton}>
                             <div className={styles.replaySvg}>
                                 <img src="/replaylogo.svg" />
                             </div>

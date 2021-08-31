@@ -50,6 +50,8 @@
     border: 0px solid #eef1f4;
     border-bottom-width: 1px;
     border-top-width: 1px;
+    height: fit-content;
+
 }
 
 .editorSidebar {
@@ -60,10 +62,12 @@
     padding: 9.6px 12px;
     border: 0px solid #eef1f4;
     border-right-width: 1px;
+    border-bottom-width: 1px;
 }
 
 .editorSidebarTop {
     position: relative;
+    height: 100%;
     top: 0px;
 }
 
@@ -84,4 +88,56 @@
 
 .editorSidebarSvgBot {
     margin-top: 20px;
+}
+
+.editorEditorDiv {
+    min-width: 0;
+    height: fit-content;
+}
+
+.editorBottomBar {
+    display: flex;
+    background-color: #f7f9fc;
+    height: 20px;
+    width: 100%;
+}
+
+.editorBottomBarContent {
+    display: flex;
+    padding: 0 8px;
+    align-items: center;
+    width: fit-content;
+    flex-shrink: 0;
+    line-height: 16px;
+    font-size: 14px;
+    flex: 1 1 0%;
+}
+
+.editorBottomBarLocator {
+    padding: 0 8px;
+    line-height: 16px;
+    font-size: 14px;
+}
+
+.editorBottomBarSvgDiv {
+    margin-right: 6.4px;
+    margin-top: -4px;
+    height: 12px;
+    width: 12px;
+}
+
+.editorBottomBarSvg {
+    position: relative;
+    height: 16px;
+    width: 16px;
+}
+
+.editorBottomBarCopilot {
+    align-items: center;
+    height: 20px;
+    width: 16px;
+}
+
+.editorBottomBarCopilotSvg {
+    align-items: center;
 }

@@ -9,11 +9,17 @@
     font-family: Cascadia Code Web,Menlo,Monaco,Consolas,Courier New;
 }
 
-.copilotText {
-
+.copilotTextBlack, .copilotTextWhite {
     padding-top: 3px;
     padding-bottom: 3px;
+}
+
+.copilotTextBlack {
     background-color: #204062;
+}
+
+.copilotTextWhite {
+    background-color: #d4ebff;
 }
 
 .copilotLeftBorder {

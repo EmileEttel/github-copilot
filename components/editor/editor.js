@@ -16,7 +16,7 @@ function Editor(props) {
                 {props.info_one.map((info) => (
                     <span key={key++} style={{ color: info.color }}>{info.text}</span>
                 ))}
-                <EditorWriting info={props.info_two} segments='10' info_three={props.info_three} letters={props.letters}/>
+                <EditorWriting info={props.info_two} segments={props.segments} info_three={props.info_three} letters={props.letters} theme={props.theme}/>
             </div>
         </div>
     )

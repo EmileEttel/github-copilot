@@ -1,3 +1,4 @@
+import EditorTerminal from "./editorTerminal"
 import styles from "./Mac.module.css"
 
 function EditorMac(props) {
@@ -30,7 +31,7 @@ function EditorMac(props) {
                                 <img src="/vsextensionlogo.svg" className={styles.editorSidebarSvg} />
                             </div>
                         </div>
-                        <div className={styles.editorSidebarBot}>
+                        <div className={styles.editorSidebarBottom}>
                             <div>
                                 <img src="/vsprofilelogo.svg" className={styles.editorSidebarSvg} />
                             </div>
@@ -38,6 +39,23 @@ function EditorMac(props) {
                                 <img src="/vssettingslogo.svg" className={styles.editorSidebarSvgBot} />
                             </div>
                         </div>
+                    </div>
+                    <div className={styles.editorEditorDiv}>
+                        <EditorTerminal height="554px" charsize={104} segments='6' linenumber={props.linenumber} info_one={props.info_one} info_two={props.info_two} info_three={props.info_three} tabs={props.tabs} border="square" theme="white" />
+                    </div>
+                </div>
+                <div className={styles.editorBottomBar}>
+                    <div className={styles.editorBottomBarContent}  style={{width: '100%'}} >
+                        <div className={styles.editorBottomBarSvgDiv}>
+                            <img src="/bottomgithublogo.svg" className={styles.editorBottomBarSvg}/>
+                        </div>
+                        main
+                    </div>
+                    <div className={styles.editorBottomBarCopilot}>
+                        <img src="/copilottag.svg" className={styles.editorBottomBarCopilotSvg}/>
+                    </div>
+                    <div className={styles.editorBottomBarLocator}>
+                        Ln 23 Col, 1
                     </div>
                 </div>
             </div>

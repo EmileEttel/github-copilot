@@ -31,7 +31,7 @@ function EditorWriting(props) {
                     </span>
                 ))}
             </span>
-            <EditorCopilot i={i} letters={letters} info_three={props.info_three} textfull={textfull} />
+            <EditorCopilot i={i} letters={letters} info_three={props.info_three} textfull={textfull} theme={props.theme}/>
         </>
     )
 }

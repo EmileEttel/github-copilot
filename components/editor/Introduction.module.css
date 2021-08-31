@@ -1,7 +1,6 @@
 .editor {
     font-size: 16px;
     line-height: 24px;
-    height: 494px;
     margin: 0 auto;
     margin-bottom: 80px;
     max-width: 960px;
@@ -48,7 +47,7 @@
     padding-top: 2px;
 }
 
-.replayButton {
+.replayButtonWhite, .replayButtonBlack {
     display: flex;
     justify-items: center;
     position: relative;
@@ -60,13 +59,16 @@
     border-radius: 16px;
     font-weight: 500;
     font-size: 16px;
-    color: white;
     border: 0;
     background-color: transparent;
     margin-top: 20px;
 }
 
-.replayButton:active {
+.replayButtonBlack {
+    filter: invert();
+}
+
+.replayButtonWhite:active, .replayButtonBlack:active {
     background-color:rgba(192,192,192,0.3);
 }
 
@@ -75,20 +77,39 @@
     bottom: 7px;
     height: fit-content;
     margin-right: 8px;
-    filter: invert();
 }
 
-.editorBorder {
+.borderRound {
     border-radius: 12px;
     border: solid 1px #000;
+}
+
+.borderSquare {
+    border: solid 1px #000;
+}
+
+.whiteTheme {
+    background-color: white;
+    border-color: #eef1f4;
+}
+
+.blackTheme {
     background-color: #232a2f;    
 }
 
-.exampleTabs {
+.whiteTabs, .blackTabs {
     display: flex;
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
     border: solid 0px #000;
-    background-color: #1a2023;
     border-bottom-width: 1px;
+}
+
+.blackTabs {
+    background-color: #1a2023;
+}
+
+.whiteTabs {
+    background-color: #f7f9fc;
+    border-color:#eef1f4;
 }
