@@ -1,6 +1,7 @@
 import { useState } from "react";
 import EditorMac from "../editor/editorMac";
 import styles from "./Firstsection.module.css"
+import FirstSectionTripleEditor from "./firstsectiontripleedtior";
 
 function FirstSection() {
     class Info {
@@ -21,7 +22,7 @@ function FirstSection() {
     let black = "#000"
     let pink = "#ff8ad1";
     let green = "#5bec95";
-    let yellow = "#e7d564";
+    let yellow = "#986801";
     let grey = "#707a84"
     let orange = "#ffa763";
     const info_one = [new Info('package ', purple), new Info('main\n\n', black), new Info('type ', purple), new Info('Run ', black), new Info('struct ', purple), new Info('{\n    Time ', black), new Info('int ', purple), new Info('// in milliseconds\n    ', lightgrey), new Info('Results ', black), new Info('string\n    ', purple), new Info('Failed ', black), new Info('bool\n', purple), new Info('}\n\n', black)]
@@ -47,6 +48,20 @@ function FirstSection() {
                     </p>
                 </div>
                 <EditorMac linenumber="23" info_one={info_one} info_two={info_two} info_three={info_three} tabs={tabs} />
+                <div className={styles.bigTitleDiv}>
+                    <h3 className={styles.bigTitle}>Skip the docs and stop searching for exampels. Github Copilot helps you stay focused right in your editor.</h3>
+                    <div className={styles.underline} />
+                </div>
+                <FirstSectionTripleEditor />
+                <div className={styles.FirstSectionMCText}>
+                    <p className={styles.thirdText}>
+                        <span className={styles.thirdTextTitle}>
+                            Show me alternatives.
+                        </span>
+                        Want to evaluate a few different approaches? GitHub Copilot can show you a list of solutions. Use the code as provided, or edit it to meet your needs.
+                    </p>
+                </div>
+                {/* <FirstSectionMCEditor /> */}
             </div>
         </section>
     )

@@ -59,3 +59,58 @@
     font-size: 64px;
     line-height: 64px;
 }
+
+.bigTitleDiv {
+    max-width: 768px;
+    margin-top: 64px;
+}
+
+.bigTitle {
+    font-size: 34px;
+    line-height: 42px;
+    font-weight: 500;
+}
+
+.underline {
+    width: 64px;
+    height: 4px;
+    background-color: #1f2937;
+    margin-top: 24px;
+}
+
+.tripleEditorWhole {
+    display: flex;
+    flex-direction: column;
+    row-gap: 160px;
+    margin: 80px 0;
+}
+
+.tripleEditorThird {
+}
+
+.thirdTextDiv {
+    /* h-full flex items-center order-1 md:order-1 md:col-span-4 */
+    gap: 80px;
+    display: flex;
+    height: 100%;
+    align-items: center;
+}
+
+.thirdText {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 500;
+    color: #707a84;
+}
+
+.thirdTextTitle {
+    color: #24292f;
+}
+
+.FirstSectionMCText {
+    margin: 24px auto 32px auto;
+    text-align: center;
+    align-items: center;
+    max-width: 576px;
+    height: 100%;
+}
