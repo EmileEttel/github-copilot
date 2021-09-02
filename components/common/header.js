@@ -50,7 +50,7 @@ function Header() {
                 <div className={styles.introWhiteButton}>
                     <Button title="Sign Up" hyperlink="https://github.com/features/copilot/signup" color="white" />
                 </div>
-                <EditorTerminal height="494px" charsize={146} linenumber="17" info_one={info_one} info_two={info_two} info_three={info_three} tabs={tabs} segments='10'/>
+                <EditorTerminal underText='1' height="494px" charsize={146} linenumber="17" info_one={info_one} info_two={info_two} info_three={info_three} tabs={tabs} segments='10'/>
                 <div className={styles.aiCredits}>
                     <span>Powered by</span>
                     <div className={styles.openAI}>

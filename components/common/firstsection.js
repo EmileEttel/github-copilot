@@ -1,5 +1,6 @@
 import { useState } from "react";
 import EditorMac from "../editor/editorMac";
+import EditorMultipleChoices from "../editor/editorMutipleChoices";
 import styles from "./Firstsection.module.css"
 import FirstSectionTripleEditor from "./firstsectiontripleedtior";
 
@@ -17,7 +18,7 @@ function FirstSection() {
         }
     }
     let purple = "#ba8ef7";
-    let blue = "#89ddff";
+    let blue = "#086de6";
     let lightgrey = "#939da5";
     let black = "#000"
     let pink = "#ff8ad1";
@@ -61,7 +62,7 @@ function FirstSection() {
                         Want to evaluate a few different approaches? GitHub Copilot can show you a list of solutions. Use the code as provided, or edit it to meet your needs.
                     </p>
                 </div>
-                {/* <FirstSectionMCEditor /> */}
+                <EditorMultipleChoices />
             </div>
         </section>
     )

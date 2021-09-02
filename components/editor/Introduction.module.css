@@ -86,6 +86,7 @@
 
 .borderSquare {
     border: solid 1px #000;
+    border-bottom-width: 0;
 }
 
 .whiteTheme {

@@ -25,9 +25,9 @@ function EditorTerminal(props) {
                         <ButtonEditor key={buttonSide} svgpath={tabs.imgsrc} title={tabs.text} position={buttonSide++} theme={props.theme} />
                     ))}
                 </div>
-                <Editor theme={props.theme} linenumber={props.linenumber} info_one={props.info_one} info_two={props.info_two} info_three={props.info_three} letters={time} segments={props.segments}/>
+                <Editor underText={props.underText} theme={props.theme} linenumber={props.linenumber} info_one={props.info_one} info_two={props.info_two} info_three={props.info_three} letters={time} segments={props.segments}/>
             </div>
-            {time >= props.charsize+20 &&
+            {time >= props.charsize+20 && props.underText == 1 &&
                 <>
                     <div className={styles.replayButtonDiv}>
                         <button onClick={() => setTimeLeft(0)} className={replayButton}>

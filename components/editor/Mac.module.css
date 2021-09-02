@@ -141,3 +141,44 @@
 .editorBottomBarCopilotSvg {
     align-items: center;
 }
+
+.multipleChoicesDiv {
+    position: relative;
+    display: inline-flex;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-width: 1px;
+    border-radius: 6px;
+    left: 32px;
+    top: 24px;
+    align-items: center;
+    background-color: white;
+    padding-left: 4px;
+    padding-right: 2px;
+}
+
+.multipleChoicesButton {
+    padding: 4px 12px;
+    display: flex;
+    align-items: center;
+    color:#086de6;
+    background-color: white;
+    border: 0;
+    font-size: 16px;
+    /* line-height: ; */
+    cursor: pointer;
+}
+
+.multipleChoicesDivider {
+    height: 16px;
+    width: 1px;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.multipleChoicesChar {
+    font-size: 10px;
+    color:rgba(0,0,0,0.4);
+    padding: 4px 8px;
+    margin-left: 8px;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 6px;
+}

@@ -16,6 +16,8 @@
     color: #999999;
 }
 
+
+
 .buttonDark {
     border: 0px solid #000;
     border-right-width: 1.5px;
@@ -24,6 +26,7 @@
 
 .buttonLight:focus {
     color: #000;
+    background-color: white;
 }
 
 .buttonDark:focus {

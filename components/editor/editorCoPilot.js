@@ -6,7 +6,7 @@ function EditorCopilot(props) {
 
     return (
         <>
-            {props.letters >= props.textfull.length + 9 &&
+            {props.letters >= props.textfull.length + 9 && 
                 <div className={styles.copilotLeftBorder}>
                     {props.info_three.map((info) => (
                         <span key={key++} className={theme} style={{ color: info.color }}>{info.text}</span>
