@@ -1,0 +1,114 @@
+.secondSection {
+    background-color: #1b1f24;
+    padding: 96px 0;
+}
+
+.secondSectionDiv {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.secondSectionTitle {
+    color: white;
+    font-weight: 800;
+    font-size: 69px;
+    padding-top: 80px;
+    line-height: 69px;
+    margin-bottom: 16px;
+}
+
+.secondSectionSubtitle {
+    max-width: 800px;
+    color: rgb(139,148,158);
+    margin: 0 auto;
+    line-height: 30px;
+    font-size: 22.2px;
+}
+
+.secondSectionWhole {
+    display: flex;
+    padding-top: 40px;
+}
+
+.secondSectionButtonDiv {
+    max-width: 216px;
+    width: 100%;
+    margin-bottom: 40px;
+    margin-right: 32px;
+}
+
+.secondSectionButton {
+    display: flex;
+    border: 1px solid rgba(0,0,0,.6);
+    padding: 12px 24px;
+    border-radius: 4px;
+    background-color: #24292f;
+    cursor: pointer;
+    align-items: center;
+    width: 100%;
+}
+
+.secondSectionButtonSvgDiv {
+    margin-left: -12px;
+    margin-right: 8px;
+}
+
+.secondSectionButtonSvg {
+    height: 20px;
+    width: 20px;
+    filter: invert();
+}
+
+.secondSectionButtonText {
+    color: white;
+    font-size: 18.3px;
+    font-weight: 500;
+}
+
+.secondSectionQuotesGridDiv {
+    margin: 0 auto;
+    margin-top: 64px;
+    width: 90%;
+}
+
+.secondSectionQuotesGrid {
+    display: grid;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 48px;
+}
+
+.secondSectionQuotesQuotes {
+    font-size: 48px;
+    color: #fff;
+    font-weight: 800;
+    line-height: 52px;
+}
+
+.secondSectionQuotesQuote {
+    color: white;
+    line-height: 30px;
+    font-size: 22.2px;
+}
+
+.secondSectionQuotesAuthor {
+    font-size: 18px;
+    margin-top: 16px;
+    color: #828990;
+    cursor: pointer;
+}
+
+.secondSectionQuotesAuthor:hover {
+    text-decoration: underline;
+}
+
+.secondSectionQuotesBig {
+    width: 100%;
+    grid-column: span 2/span 2;
+}
+
+.secondSectionQuotesBigQuote {
+    color: white;
+    line-height: 60px;
+    font-size: 50px;
+}
