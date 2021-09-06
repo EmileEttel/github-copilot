@@ -1,0 +1,39 @@
+.footerSection {
+    background-color: #0d0f12;
+}
+
+.footerDiv {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    max-width: 1120px;
+    padding: 12px 0;
+    font-size: 14px;
+    justify-content: space-between;
+    line-height: 20px;
+}
+
+.footerLeftDiv {
+    color: #999999;
+    align-items: center;
+    display: flex;
+    min-width: 0;
+    white-space: nowrap;
+    flex-wrap: wrap;
+}
+
+.footerLeftLinks {
+    margin-left: 12px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.footerRightDiv {
+    filter: invert(0.6);
+    display: flex;
+    align-items: center;
+}
+
+.footerRightA {
+    padding: 8px;
+}

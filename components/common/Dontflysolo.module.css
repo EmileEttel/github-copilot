@@ -1,0 +1,27 @@
+.dfsSection {
+    padding: 144px 0;
+    background-color: rgba(27,31,36,1);
+    background-image: url('/topbackground.png');
+    color: white;
+}
+
+.dfsDiv {
+    margin: 0 auto;
+    padding: 0 16px;
+    max-width: 1280px;
+}
+
+.dfsImgDiv {
+    width: 258px;
+    margin: 0 auto;
+    margin-bottom: -30px;
+}
+
+.dfsText {
+    text-align: center;
+    margin: 0;
+    letter-spacing: -4px;
+    margin-bottom: 40px;
+    font-weight: 800;
+    font-size: 80px;
+}

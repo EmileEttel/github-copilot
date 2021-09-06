@@ -1,0 +1,68 @@
+.faqSection {
+    padding: 144px 0;
+}
+
+.faqDiv {
+    margin: 0 auto;
+    max-width: 1280px;
+    padding: 0 16px;   
+}
+
+.faqTitle {
+    color: black;
+    font-weight: 800;
+    font-size: 69px;
+    line-height: 69px;
+}
+
+.faqButtonList {
+    display: flex;
+    flex-direction: column;
+    top: 16px;
+    width: 168px;
+    position: sticky;
+    margin-right: 48px;
+}
+
+.faqButton {
+    background-color: #f6f8fa;
+    width: 100%;
+    color: #24292f;
+    border-color: rgba(53,72,91,.15);
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: left;
+    align-items: center;
+    font-size: 20px;
+    line-height: 23px;
+    font-weight: 600;
+    padding: 16px 24px;
+}
+
+.faqAnswers {
+    width: 100%;
+    display: grid;
+    gap: 48px;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+}
+
+.faqAnswerTitle {
+    padding: 12px 24px;
+    margin: -12px -24px;
+    margin-bottom: 8px;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 26px;
+}   
+
+.faqAnswerDesc {
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 22px;
+    color: #6a737d;
+    text-align: left;
+}
+
+.GitHubCopilotTwitter {
+    color: black;
+}
