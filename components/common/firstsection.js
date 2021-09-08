@@ -30,7 +30,6 @@ function FirstSection() {
     const info_two = [[new Info('// Get average runtime of successful runs in seconds\n', lightgrey), new Info('func ', purple), new Info('averageRuntimeInSeconds', blue), new Info('(runs []Run) ', black), new Info('float64 ', blue), new Info('{', black)], 0];
     const info_three = [[new Info('    var ', purple), new Info('totalTime ', black), new Info('int\n    ', purple), new Info('var ', purple), new Info('failedRuns ', black), new Info('int\n    for ', purple), new Info('_, run := ', black), new Info('range ', purple), new Info('runs {\n        ', black), new Info('if ', purple), new Info('run.Failed {\n                failedRuns++\n            } ', black), new Info('else ', purple), new Info('{\n                totalTime += run.Time\n            }\n        }\n\n            averageRuntime := ', black), new Info('float64', purple), new Info('(totalTime) / ', black), new Info('float64', purple), new Info('(len(runs) - failedRuns) / ', black), new Info('1000\n    ', yellow), new Info('return ', purple), new Info('averageRuntime\n}', black)], 0];
     const tabs = [new Tabs("/gologo.svg", "runtime.go"), new Tabs("/jslogo.svg", "days_between_dates.js"), new Tabs("/gologo.svg", "server.go")]
-    console.log(info_one);
 
     return (
         <section>
