@@ -15,10 +15,10 @@ export default function Home() {
     <Header />
     <FirstSection />
     <SecondSection />
-    <ThirdSection />
-    <FrequentlyAsked />
-    <DontFlySolo />
-    <Footer />
+    {/* <ThirdSection /> */}
+    {/* <FrequentlyAsked /> */}
+    {/* <DontFlySolo /> */}
+    {/* <Footer /> */}
     </>
   )
 }
