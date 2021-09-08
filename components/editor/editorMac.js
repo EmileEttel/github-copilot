@@ -41,7 +41,7 @@ function EditorMac(props) {
                         </div>
                     </div>
                     <div className={styles.editorEditorDiv}>
-                        <EditorTerminal underText='1' height="554px" charsize={104} segments='6' linenumber={props.linenumber} info_one={props.info_one} info_two={props.info_two} info_three={props.info_three} tabs={props.tabs} border="square" theme="white" />
+                        <EditorTerminal underText='1' height={["554px", 0]} charsize={[104, 0]} segments='6' linenumber={props.linenumber} info_one={props.info_one} info_two={props.info_two} info_three={props.info_three} tabs={props.tabs} border="square" theme="white" />
                     </div>
                 </div>
                 <div className={styles.editorBottomBar}>

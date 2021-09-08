@@ -16,7 +16,18 @@
     filter: invert();
 }
 
-.imgDark, .imgLight {
+.img {
     position: relative;
-    top: 3px;
+    top: -2px;
+    margin: -4px 0;
+    transition: transform .2s;
+    transform: translateX(0);
+    width: 16px;
+    height: 16px;
+}
+
+.imgStem {
+    stroke-dasharray: 10;
+    stroke-dashoffset: 10;
+    transition: stroke-dashoffset .2s;
 }

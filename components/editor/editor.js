@@ -1,4 +1,3 @@
-import { loadGetInitialProps } from 'next/dist/shared/lib/utils';
 import styles from './Editor.module.css'
 import EditorLine from './editorLine';
 import EditorWriting from './editorWriting';

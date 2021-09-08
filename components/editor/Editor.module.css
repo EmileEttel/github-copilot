@@ -7,6 +7,7 @@
     width: auto;
     color: #939da5;
     font-family: Cascadia Code Web,Menlo,Monaco,Consolas,Courier New;
+    overflow-x: auto;
 }
 
 .copilotTextBlack, .copilotTextWhite {

@@ -104,6 +104,7 @@
     border-bottom-right-radius: 0px;
     border: solid 0px #000;
     border-bottom-width: 1px;
+    margin-bottom: -1px;
 }
 
 .blackTabs {
@@ -114,3 +115,45 @@
     background-color: #f7f9fc;
     border-color:#eef1f4;
 }
+
+.buttonLight, .buttonDark {
+    padding: 11.2px 16px 8px 16px;
+    margin: 0;
+    background-color: transparent;
+    height: 43.2px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: -1px;
+}
+
+.buttonLight {
+    border: 0px solid #eef1f4;
+    border-right-width: 1.5px;
+    border-color:#eef1f4;
+    color: #999999;
+}
+
+.buttonDark {
+    border: 0px solid #000;
+    border-right-width: 1.5px;
+    color: #565e63;
+}
+
+.buttonLight:focus {
+    color: #000;
+    background-color: white;
+}
+
+.buttonDark:focus {
+    background-color: #232a2f;
+    border-bottom-color: #232a2f;
+    color: #939da5;
+}
+
+.sideborders {
+    border-top-left-radius: 12px;
+}
+
