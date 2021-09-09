@@ -1,4 +1,3 @@
-import Image from "next/image";
 import styles from "./Footer.module.css"
 
 function Footer() {
@@ -13,19 +12,19 @@ function Footer() {
                 </div>
                 <div className={styles.footerRightDiv}>
                     <a className={styles.footerRightA} href="https://twitter.com/github">
-                        <Image layout="fill" src="/twitterfooterlogo.svg" />
+                        <img src="/twitterfooterlogo.svg" />
                     </a>
                     <a className={styles.footerRightA} style={{ marginLeft: "4px" }} href="https://www.facebook.com/GitHub">
-                        <Image layout="fill" src="/facebookfooterlogo.svg" />
+                        <img src="/facebookfooterlogo.svg" />
                     </a>
                     <a className={styles.footerRightA} style={{ marginLeft: "4px" }} href="https://www.youtube.com/github">
-                        <Image layout="fill" src="/youtubefooterlogo.svg" />
+                        <img src="/youtubefooterlogo.svg" />
                     </a>
                     <a className={styles.footerRightA} style={{ marginLeft: "4px" }} href="https://www.linkedin.com/company/github">
-                        <Image layout="fill" src="/linkdfooterlogo.svg" />
+                        <img src="/linkdfooterlogo.svg" />
                     </a>
                     <a className={styles.footerRightA} style={{ marginLeft: "4px" }} href="https://github.com/github">
-                        <Image layout="fill" src="/githubfooterlogo.svg" />
+                        <img src="/githubfooterlogo.svg" />
                     </a>
                 </div>
             </div>

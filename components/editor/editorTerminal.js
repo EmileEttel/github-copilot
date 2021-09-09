@@ -3,8 +3,6 @@ import styles from './Introduction.module.css'
 import Editor from './editor'
 import { useEffect, useState } from 'react';
 
-import Image from 'next/image';
-
 function EditorTerminal(props) {
     const borderStyle = props.border === "square" ? styles.borderSquare : styles.borderRound;
     const colorTheme = props.theme === "white" ? styles.whiteTheme : styles.blackTheme;
@@ -16,23 +14,25 @@ function EditorTerminal(props) {
     const [time, setTimeLeft] = useState(0);
     const [test, setTestB] = useState(0);
     const [selectTab, setSelectTab] = useState(0);
-    // put whole if in the useEffect hook so that you can stop it at will
     useEffect(() => {
-        if (props.charsize && time < props.charsize[tab] + 20) {
+        if (test == 0 && props.charsize && time < props.charsize[tab] + 20) {
             setTimeout(() => {
                 setTimeLeft(time + 1);
             }, 25);
         }
-    })
-    if (test == 1) {
-        if (selectTab != tab) {
-            setSelectTab(tab);
-            setTimeout(() => {
+        if (test == 1) {
+            if (selectTab == tab) {
+                setTimeout(() => {
+                    setTimeLeft(time + 1);
+                }, 25);    
+            }
+            if (selectTab != tab) {
+                setSelectTab(tab);
                 setTimeLeft(0);
-            }, 25);
+            }
+            setTestB(0);
         }
-        setTestB(0);
-    }
+    }, [time])
 
     return (
         <div className={styles.editor} style={{ height: props.height[tab] }}>
@@ -45,7 +45,7 @@ function EditorTerminal(props) {
                                     setCurrentTab(tabs.tabnum)
                                     setTestB(1)
                                 }}>
-                                    <ButtonEditor svgpath={tabs.imgsrc} height={tabs.height} width={tabs.width} title={tabs.text} theme={props.theme} />
+                                    <ButtonEditor svgpath={tabs.imgsrc} title={tabs.text} theme={props.theme} />
                                 </button>
                             }
                             {buttonSide++ > 1 &&
@@ -53,7 +53,7 @@ function EditorTerminal(props) {
                                     setCurrentTab(tabs.tabnum)
                                     setTestB(1)
                                 }}>
-                                    <ButtonEditor svgpath={tabs.imgsrc} height={tabs.height} width={tabs.width} title={tabs.text} theme={props.theme} />
+                                    <ButtonEditor svgpath={tabs.imgsrc} title={tabs.text} theme={props.theme} />
                                 </button>
                             }
                         </span>
@@ -61,12 +61,12 @@ function EditorTerminal(props) {
                 </div>
                 <Editor underText={props.underText} theme={props.theme} linenumber={props.linenumber[tab]} info_one={props.info_one[tab]} info_two={props.info_two[tab]} info_three={props.info_three[tab]} letters={time} segments={props.segments[tab]} />
             </div>
-            {props.underText == 1 && time >= props.charsize[tab] + 20 && 
+            {props.underText == 1 && time >= props.charsize[tab] + 20 &&
                 <>
                     <div className={styles.replayButtonDiv}>
                         <button onClick={() => setTimeLeft(0)} className={replayButton}>
                             <div className={styles.replaySvg}>
-                                <Image height="15px" width="16px" src="/replaylogo.svg" />
+                                <img src="/replaylogo.svg" />
                             </div>
                             Replay
                         </button>
@@ -74,7 +74,7 @@ function EditorTerminal(props) {
                     <div className={styles.copilotTagDiv}>
                         <div className={styles.copilotTagText}>
                             <div className={styles.copilotTagSvg}>
-                                <Image height="15px" width="16px" className={styles.copilotTagSvg} src="/copilottag.svg" />
+                                <img src="/copilottag.svg" />
                             </div>
                             Copilot
                         </div>

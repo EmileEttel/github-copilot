@@ -2,8 +2,7 @@ import { useState } from 'react';
 import EditorTerminal from '../editor/editorTerminal'
 import Button from './button'
 import styles from './Introduction.module.css'
-import { info_one, info_two, info_three, heights, lines, charsizes, segments, tabs } from "../editor/editorHeaderContent.js"
-import Image from 'next/image';
+import {info_one, info_two, info_three, heights, lines, charsizes, segments, tabs} from "../editor/editorHeaderContent.js"
 
 function Header() {
 
@@ -12,7 +11,7 @@ function Header() {
             <div className={styles.introduction}>
                 <div className={styles.header}>
                     <div className={styles.introductionLogo}>
-                        <Image height="22.6px" width="179.767px" src="/github-copilot.svg" />
+                        <img src="/github-copilot.svg"></img>
                     </div>
                     <Button title="Sign Up" hyperlink="https://github.com/features/copilot/signup" />
                 </div>
@@ -28,11 +27,11 @@ function Header() {
                 <div className={styles.introWhiteButton}>
                     <Button title="Sign Up" hyperlink="https://github.com/features/copilot/signup" color="white" />
                 </div>
-                <EditorTerminal underText={1} height={heights} charsize={charsizes} linenumber={lines} info_one={info_one} info_two={info_two} info_three={info_three} tabs={tabs} segments={segments} />
+                <EditorTerminal underText={1} height={heights} charsize={charsizes} linenumber={lines} info_one={info_one} info_two={info_two} info_three={info_three} tabs={tabs} segments={segments}/>
                 <div className={styles.aiCredits}>
                     <span>Powered by</span>
                     <div className={styles.openAI}>
-                        <Image width="120px" height="30px" src="/openAI.svg" />
+                        <img src="/openAI.svg" />
                     </div>
                 </div>
                 <div className={styles.aiDescription}>
@@ -41,7 +40,7 @@ function Header() {
                 <div className={styles.threeDescription}>
                     <div>
                         <div className={styles.threeDescSvg}>
-                            <Image width="28px" height="32px" src="/puzzlelogo.svg" />
+                            <img src="/puzzlelogo.svg" />
                         </div>
                         <div className={styles.threeDescTitle}>
                             <h3 className={styles.threeDescH3}>Extends your editor</h3>
@@ -56,7 +55,7 @@ function Header() {
                     </div>
                     <div>
                         <div className={styles.threeDescSvg}>
-                            <Image width="28px" height="32px" src="/filelogo.svg" />
+                            <img src="/filelogo.svg" />
                         </div>
                         <div className={styles.threeDescTitle}>
                             <h3 className={styles.threeDescH3}>Speaks all the languages you love</h3>
@@ -69,7 +68,7 @@ function Header() {
                     </div>
                     <div>
                         <div className={styles.threeDescSvg}>
-                            <Image width="28px" height="32px" src="/pilotlogo.svg" />
+                            <img src="/pilotlogo.svg" />
                         </div>
                         <div className={styles.threeDescTitle}>
                             <h3 className={styles.threeDescH3}>You’re the pilot</h3>

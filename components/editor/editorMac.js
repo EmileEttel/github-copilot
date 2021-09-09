@@ -1,4 +1,3 @@
-import Image from "next/image";
 import EditorTerminal from "./editorTerminal"
 import styles from "./Mac.module.css"
 
@@ -17,27 +16,27 @@ function EditorMac(props) {
                     <div className={styles.editorSidebar}>
                         <div className={styles.editorSidebarTop}>
                             <div>
-                                <Image layout="fill" src="/vsfilelogo.svg" className={styles.editorSidebarSvgTop} />
+                                <img src="/vsfilelogo.svg" className={styles.editorSidebarSvgTop} />
                             </div>
                             <div>
-                                <Image layout="fill" src="/vssearchlogo.svg" className={styles.editorSidebarSvgTop} />
+                                <img src="/vssearchlogo.svg" className={styles.editorSidebarSvgTop} />
                             </div>
                             <div>
-                                <Image layout="fill" src="/vsgithublogo.svg" className={styles.editorSidebarSvgTop} />
+                                <img src="/vsgithublogo.svg" className={styles.editorSidebarSvgTop} />
                             </div>
                             <div>
-                                <Image layout="fill" src="/vsdebuglogo.svg" className={styles.editorSidebarSvgTop} />
+                                <img src="/vsdebuglogo.svg" className={styles.editorSidebarSvgTop} />
                             </div>
                             <div>
-                                <Image layout="fill" src="/vsextensionlogo.svg" className={styles.editorSidebarSvg} />
+                                <img src="/vsextensionlogo.svg" className={styles.editorSidebarSvg} />
                             </div>
                         </div>
                         <div className={styles.editorSidebarBottom}>
                             <div>
-                                <Image layout="fill" src="/vsprofilelogo.svg" className={styles.editorSidebarSvg} />
+                                <img src="/vsprofilelogo.svg" className={styles.editorSidebarSvg} />
                             </div>
                             <div>
-                                <Image layout="fill" src="/vssettingslogo.svg" className={styles.editorSidebarSvgBot} />
+                                <img src="/vssettingslogo.svg" className={styles.editorSidebarSvgBot} />
                             </div>
                         </div>
                     </div>
@@ -48,12 +47,12 @@ function EditorMac(props) {
                 <div className={styles.editorBottomBar}>
                     <div className={styles.editorBottomBarContent}  style={{width: '100%'}} >
                         <div className={styles.editorBottomBarSvgDiv}>
-                            <Image layout="fill" src="/bottomgithublogo.svg" className={styles.editorBottomBarSvg}/>
+                            <img src="/bottomgithublogo.svg" className={styles.editorBottomBarSvg}/>
                         </div>
                         main
                     </div>
                     <div className={styles.editorBottomBarCopilot}>
-                        <Image layout="fill" src="/copilottag.svg" className={styles.editorBottomBarCopilotSvg}/>
+                        <img src="/copilottag.svg" className={styles.editorBottomBarCopilotSvg}/>
                     </div>
                     <div className={styles.editorBottomBarLocator}>
                         Ln 23 Col, 1

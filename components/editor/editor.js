@@ -4,6 +4,8 @@ import EditorWriting from './editorWriting';
 
 function Editor(props) {
     const theme = props.theme === "dark" ? styles.lightTheme : styles.darkTheme;
+    let sentence = "Joe mama"
+    let test = sentence.split("");
     let key = 0;
 
     return (
