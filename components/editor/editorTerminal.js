@@ -1,7 +1,9 @@
 import ButtonEditor from '../buttons/buttonEditor'
 import styles from './Introduction.module.css'
 import Editor from './editor'
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+
+import Image from 'next/image';
 
 function EditorTerminal(props) {
     const borderStyle = props.border === "square" ? styles.borderSquare : styles.borderRound;
@@ -14,11 +16,14 @@ function EditorTerminal(props) {
     const [time, setTimeLeft] = useState(0);
     const [test, setTestB] = useState(0);
     const [selectTab, setSelectTab] = useState(0);
-    if (props.charsize && time < props.charsize[tab] + 20) {
-        setTimeout(() => {
-            setTimeLeft(time + 1);
-        }, 25);
-    }
+    // put whole if in the useEffect hook so that you can stop it at will
+    useEffect(() => {
+        if (props.charsize && time < props.charsize[tab] + 20) {
+            setTimeout(() => {
+                setTimeLeft(time + 1);
+            }, 25);
+        }
+    })
     if (test == 1) {
         if (selectTab != tab) {
             setSelectTab(tab);
@@ -40,7 +45,7 @@ function EditorTerminal(props) {
                                     setCurrentTab(tabs.tabnum)
                                     setTestB(1)
                                 }}>
-                                    <ButtonEditor svgpath={tabs.imgsrc} title={tabs.text} theme={props.theme} />
+                                    <ButtonEditor svgpath={tabs.imgsrc} height={tabs.height} width={tabs.width} title={tabs.text} theme={props.theme} />
                                 </button>
                             }
                             {buttonSide++ > 1 &&
@@ -48,7 +53,7 @@ function EditorTerminal(props) {
                                     setCurrentTab(tabs.tabnum)
                                     setTestB(1)
                                 }}>
-                                    <ButtonEditor svgpath={tabs.imgsrc} title={tabs.text} theme={props.theme} />
+                                    <ButtonEditor svgpath={tabs.imgsrc} height={tabs.height} width={tabs.width} title={tabs.text} theme={props.theme} />
                                 </button>
                             }
                         </span>
@@ -61,7 +66,7 @@ function EditorTerminal(props) {
                     <div className={styles.replayButtonDiv}>
                         <button onClick={() => setTimeLeft(0)} className={replayButton}>
                             <div className={styles.replaySvg}>
-                                <img src="/replaylogo.svg" />
+                                <Image height="15px" width="16px" src="/replaylogo.svg" />
                             </div>
                             Replay
                         </button>
@@ -69,7 +74,7 @@ function EditorTerminal(props) {
                     <div className={styles.copilotTagDiv}>
                         <div className={styles.copilotTagText}>
                             <div className={styles.copilotTagSvg}>
-                                <img src="/copilottag.svg" />
+                                <Image height="15px" width="16px" className={styles.copilotTagSvg} src="/copilottag.svg" />
                             </div>
                             Copilot
                         </div>

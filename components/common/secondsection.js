@@ -1,8 +1,11 @@
 import EditorTerminal from "../editor/editorTerminal";
 import styles from "./Secondsection.module.css"
 import { info_one, info_two, info_three, heights, lines, charsizes, segments, tabs } from "../editor/editorHeaderContent.js"
+import Image from "next/image";
 
 function SecondSection() {
+    const pText = "Hundreds of engineers, including many of our own, have been using GitHub Copilot every day. It's transformed the way they work – here's what they have to say:"
+    const lastPText = "I'm impressed by how GitHub Copilot seems to know exactly what I want to type next. GitHub Copilot is particularly helpful when working on React components, where it makes eerily accurate predictions. GitHub Copilot has become an indispensable part of my programmer toolbelt."
 
     return (
         <section>
@@ -18,25 +21,25 @@ function SecondSection() {
                         <div className={styles.secondSectionButtonDiv}>
                             <button className={styles.secondSectionButton}>
                                 <div className={styles.secondSectionButtonSvgDiv}>
-                                    <img className={styles.secondSectionButtonSvg} src="/twitterlogo.svg" />
+                                    <Image layout="fill" className={styles.secondSectionButtonSvg} src="/twitterlogo.svg" />
                                 </div>
                                 <div className={styles.secondSectionButtonText}>Fetch tweets</div>
                             </button>
                             <button className={styles.secondSectionButton}>
                                 <div className={styles.secondSectionButtonSvgDiv}>
-                                    <img className={styles.secondSectionButtonSvg} src="/scatterplotlogo.svg" />
+                                    <Image layout="fill" className={styles.secondSectionButtonSvg} src="/scatterplotlogo.svg" />
                                 </div>
                                 <div className={styles.secondSectionButtonText}>Draw a scatterplot</div>
                             </button>
                             <button className={styles.secondSectionButton}>
                                 <div className={styles.secondSectionButtonSvgDiv}>
-                                    <img className={styles.secondSectionButtonSvg} src="/memoizationlogo.svg" />
+                                    <Image layout="fill" className={styles.secondSectionButtonSvg} src="/memoizationlogo.svg" />
                                 </div>
                                 <div className={styles.secondSectionButtonText}>Memoization</div>
                             </button>
                             <button className={styles.secondSectionButton}>
                                 <div className={styles.secondSectionButtonSvgDiv}>
-                                    <img className={styles.secondSectionButtonSvg} src="/goodreadslogo.svg" />
+                                    <Image layout="fill" className={styles.secondSectionButtonSvg} src="/goodreadslogo.svg" />
                                 </div>
                                 <div className={styles.secondSectionButtonText}>Goodreads rating</div>
                             </button>
@@ -51,7 +54,7 @@ function SecondSection() {
                         Flight reports
                     </h2>
                     <p className={styles.secondSectionSubtitle} style={{ margin: '0 0' }}>
-                        Hundreds of engineers, including many of our own, have been using GitHub Copilot every day. It's transformed the way they work – here's what they have to say:
+                        {pText}
                     </p>
                     <div className={styles.secondSectionQuotesGridDiv}>
                         <div className={styles.secondSectionQuotesGrid}>
@@ -72,7 +75,7 @@ function SecondSection() {
                             </figure>
                             <figure style={{ position: 'relative' }}>
                                 <span className={styles.secondSectionQuotesQuotes}>“<br /></span>
-                                <span className={styles.secondSectionQuotesQuote}>I'm impressed by how GitHub Copilot seems to know exactly what I want to type next. GitHub Copilot is particularly helpful when working on React components, where it makes eerily accurate predictions. GitHub Copilot has become an indispensable part of my programmer toolbelt.<br /><br /></span>
+                                <span className={styles.secondSectionQuotesQuote}>{lastPText}<br /><br /></span>
                                 <a className={styles.secondSectionQuotesAuthor} href="https://github.com/feross">Feross Aboukhadijeh</a>
                             </figure>
                             <figure style={{ position: 'relative' }}>

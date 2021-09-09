@@ -1,4 +1,5 @@
 import styles from './editor.module.css'
+import Image from 'next/dist/client/image';
 
 function ButtonEditor(props) {
     const text = props.title;
@@ -9,7 +10,12 @@ function ButtonEditor(props) {
     return (
         <>
             <div className={styles.divClass}>
-                <img className={svgColor} src={logo} />
+                <Image 
+                width={props.width}
+                height={props.height}
+                className={svgColor} 
+                src={logo} 
+                />
             </div>
             <a className={textColor}>{text}</a>
         </>

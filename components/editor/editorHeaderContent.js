@@ -5,10 +5,12 @@ class Info {
     }
 }
 class Tabs {
-    constructor(imgsrc, text, tabnum) {
+    constructor(imgsrc, text, tabnum, height, width) {
         this.text = text;
         this.imgsrc = imgsrc;
         this.tabnum = tabnum;
+        this.height = height;
+        this.width = width;
     }
 }
 let pink = "#ff8ad1";
@@ -32,6 +34,6 @@ const heights = ["494px", "810px"];
 const lines = ["17", "30"];
 const charsizes = [146, 69];
 const segments = [10, 3];
-const tabs = [new Tabs("/tslogo.svg", "sentiments.ts", 0), new Tabs("/gologo.svg", "write_sql.go", 1), new Tabs("/pylogo.svg", "parse_expenses.py", 2), new Tabs("/rblogo.svg", "addresses.rb", 3)]
+const tabs = [new Tabs("/tslogo.svg", "sentiments.ts", 0, '14px', '14px'), new Tabs("/gologo.svg", "write_sql.go", 1, '18.2px', '18.2px'), new Tabs("/pylogo.svg", "parse_expenses.py", 2, '14px', '14px'), new Tabs("/rblogo.svg", "addresses.rb", 3, '14px', '14px')]
 
 export { info_one, info_two, info_three, heights, lines, charsizes, segments, tabs }

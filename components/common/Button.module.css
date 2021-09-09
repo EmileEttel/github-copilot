@@ -4,6 +4,7 @@
     border-radius: 6px;
     border: solid 1px #4f565e;
     cursor: pointer;
+    align-items: center;
 }
 
 .buttonLight {
@@ -16,18 +17,11 @@
     filter: invert();
 }
 
-.img {
+.imgDark, .imgLight {
     position: relative;
-    top: -2px;
-    margin: -4px 0;
+    top: 2px;
     transition: transform .2s;
     transform: translateX(0);
-    width: 16px;
     height: 16px;
-}
-
-.imgStem {
-    stroke-dasharray: 10;
-    stroke-dashoffset: 10;
-    transition: stroke-dashoffset .2s;
+    width: 16px;
 }

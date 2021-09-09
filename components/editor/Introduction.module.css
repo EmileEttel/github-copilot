@@ -45,6 +45,8 @@
     top: 100%;
     padding-right: 4.8px;
     padding-top: 2px;
+    height: 15px;
+    width: 16px ;
 }
 
 .replayButtonWhite, .replayButtonBlack {
