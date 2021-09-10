@@ -2,6 +2,7 @@ import ButtonEditor from '../buttons/buttonEditor'
 import styles from './Introduction.module.css'
 import Editor from './editor'
 import { useEffect, useState } from 'react';
+import EditorChartype from './editorchartype';
 
 function EditorTerminal(props) {
     const borderStyle = props.border === "square" ? styles.borderSquare : styles.borderRound;
@@ -15,23 +16,7 @@ function EditorTerminal(props) {
     const [test, setTestB] = useState(0);
     const [selectTab, setSelectTab] = useState(0);
     useEffect(() => {
-        if (test == 0 && props.charsize && time < props.charsize[tab] + 20) {
-            setTimeout(() => {
-                setTimeLeft(time + 1);
-            }, 25);
-        }
-        if (test == 1) {
-            if (selectTab == tab) {
-                setTimeout(() => {
-                    setTimeLeft(time + 1);
-                }, 25);    
-            }
-            if (selectTab != tab) {
-                setSelectTab(tab);
-                setTimeLeft(0);
-            }
-            setTestB(0);
-        }
+        EditorChartype(tab, setCurrentTab, time, setTimeLeft, test, setTestB, selectTab, setSelectTab, props);
     }, [time])
 
     return (
@@ -44,6 +29,7 @@ function EditorTerminal(props) {
                                 <button className={`${buttonClass} + ${styles.sideborders}`} onClick={() => {
                                     setCurrentTab(tabs.tabnum)
                                     setTestB(1)
+                                    setTimeLeft(time)
                                 }}>
                                     <ButtonEditor svgpath={tabs.imgsrc} title={tabs.text} theme={props.theme} />
                                 </button>
@@ -52,6 +38,7 @@ function EditorTerminal(props) {
                                 <button className={`${buttonClass}`} onClick={() => {
                                     setCurrentTab(tabs.tabnum)
                                     setTestB(1)
+                                    setTimeLeft(time)
                                 }}>
                                     <ButtonEditor svgpath={tabs.imgsrc} title={tabs.text} theme={props.theme} />
                                 </button>
