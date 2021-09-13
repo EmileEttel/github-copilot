@@ -57,27 +57,27 @@ function SecondSection() {
                     </p>
                     <div className={styles.secondSectionQuotesGridDiv}>
                         <div className={styles.secondSectionQuotesGrid}>
-                            <figure style={{ position: 'relative' }}>
+                            <figure className={styles.secondSectionQuotesFigure}>
                                 <span className={styles.secondSectionQuotesQuotes}>“<br /></span>
                                 <span className={styles.secondSectionQuotesQuote}>Trying to code in an unfamiliar language by googling everything is like navigating a foreign country with just a phrase book. Using GitHub Copilot is like hiring an interpreter.<br /><br /></span>
                                 <a className={styles.secondSectionQuotesAuthor} href="https://github.com/harri-edwards/">Harri Edwards // OpenAI</a>
                             </figure>
-                            <figure style={{ position: 'relative' }}>
+                            <figure className={styles.secondSectionQuotesFigure}>
                                 <span className={styles.secondSectionQuotesQuotes}>“<br /></span>
                                 <span className={styles.secondSectionQuotesQuote}>It surprised me with how precisely it understood my comment and generated accurate suggestions. The ability to choose from 10 different suggestions was the cherry on top.<br /><br /></span>
                                 <a className={styles.secondSectionQuotesAuthor} href="https://github.com/Gunnika">Gunnika Batra</a>
                             </figure>
-                            <figure style={{ position: 'relative' }} className={styles.secondSectionQuotesBig}>
+                            <figure className={`${styles.secondSectionQuotesFigure} + ${styles.secondSectionQuotesBig}`}>
                                 <span className={styles.secondSectionQuotesQuotes} >“<br /></span>
                                 <span className={styles.secondSectionQuotesBigQuote}>In the first day, GitHub Copilot already taught me about a nuance in Javascript object comparison and is as comfortable with our database schema as I am. This is the single most mind-blowing application of ML I’ve ever seen.<br /><br /></span>
                                 <a className={styles.secondSectionQuotesAuthor} href="https://github.com/mikeyk">Mike Krieger // Co-founder, Instagram</a>
                             </figure>
-                            <figure style={{ position: 'relative' }}>
+                            <figure className={styles.secondSectionQuotesFigure}>
                                 <span className={styles.secondSectionQuotesQuotes}>“<br /></span>
                                 <span className={styles.secondSectionQuotesQuote}>{thirdParagraph}<br /><br /></span>
                                 <a className={styles.secondSectionQuotesAuthor} href="https://github.com/feross">Feross Aboukhadijeh</a>
                             </figure>
-                            <figure style={{ position: 'relative' }}>
+                            <figure className={styles.secondSectionQuotesFigure}>
                                 <span className={styles.secondSectionQuotesQuotes}>“<br /></span>
                                 <span className={styles.secondSectionQuotesQuote}>GitHub Copilot discovered that a test file I was working in was missing a specific test and suggested and wrote the test for me.<br /><br /></span>
                                 <a className={styles.secondSectionQuotesAuthor} href="https://github.com/katestud">Kate Studwell // GitHub</a>

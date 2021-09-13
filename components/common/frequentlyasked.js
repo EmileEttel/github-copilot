@@ -8,7 +8,7 @@ function FrequentlyAsked() {
                 <div style={{ marginBottom: '40px' }}>
                     <h2 className={styles.faqTitle}>Frequently<br />asked questions</h2>
                 </div>
-                <div style={{ display: 'flex' }}>
+                <div className={styles.faqWhole}>
                     <div className={styles.faqButtonList}>
                         <button className={styles.faqButton}>General</button>
                         <button className={styles.faqButton}>Training Set</button>

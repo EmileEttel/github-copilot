@@ -123,3 +123,12 @@
   height: 2.75rem;
   display: flex;
 }
+
+@media only screen and (max-width: 750px) {
+  .threeDescription {  grid-template-columns: repeat(1,minmax(0,1fr)) }
+}
+
+@media only screen and (max-width: 530px) {
+  .bigTitle {font-size: 42px; line-height: 46px;}
+  .smallSubtitle {font-size: 20px; line-height: 24px;} 
+}

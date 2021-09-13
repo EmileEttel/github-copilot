@@ -6,7 +6,7 @@ function Button(props) {
 
     return (
         <div className={buttonClassName}>
-            <a href={props.hyperlink} style={{alignItems: "center"}}>
+            <a href={props.hyperlink} className={styles.a}>
                     <strong>{props.title}</strong>
                     <img className={imgClassName} src="/SignUpButton.svg"/>
             </a>

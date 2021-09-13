@@ -105,6 +105,8 @@
     border: solid 0px #000;
     border-bottom-width: 1px;
     margin-bottom: -1px;
+    overflow-x: auto;
+    overflow-y: hidden;
 }
 
 .blackTabs {
@@ -157,3 +159,6 @@
     border-top-left-radius: 12px;
 }
 
+@media only screen and (max-width: 1010px) {
+    .editor {  font-size: 14px; line-height: 20px;}
+}

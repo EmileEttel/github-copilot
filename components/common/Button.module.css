@@ -1,9 +1,14 @@
 .buttonLight, .buttonDark {
+    align-items: center;
     padding: 10px 20px 10px 20px;
     width: fit-content;
     border-radius: 6px;
     border: solid 1px #4f565e;
     cursor: pointer;
+}
+
+.a {
+    width: 100%;
 }
 
 .buttonLight {
@@ -21,6 +26,7 @@
     top: -2px;
     margin: -4px 0;
     transition: transform .2s;
+    text-align: center;
     transform: translateX(0);
     width: 16px;
     height: 16px;
@@ -30,4 +36,12 @@
     stroke-dasharray: 10;
     stroke-dashoffset: 10;
     transition: stroke-dashoffset .2s;
+} 
+
+@media only screen and (max-width: 530px) {
+    .buttonLight { width: 80%; }
+}
+
+@media only screen and (max-width: 338px) {
+    .buttonDark { display: none; }
 }

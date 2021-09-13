@@ -66,3 +66,14 @@
 .GitHubCopilotTwitter {
     color: black;
 }
+
+.faqWhole {
+    display: flex;
+}
+
+@media only screen and (max-width: 380px) {
+    .faqTitle {line-height: 36px; font-size: 32px;}
+    .faqWhole {flex-direction: column;}
+    .faqButtonList {position: relative;}
+    .faqAnswers {display: flex; flex-direction: column;}
+}

@@ -14,9 +14,12 @@ function FirstSection() {
                     <div className={styles.firstSectionTitle}>
                         <h2 className={styles.firstSectionH2}>
                             <span>
-                                More than au
+                                More than &nbsp;
+                                <span className={styles.autocompleteSpan}>
+                                    au
                                 <span className={styles.cursorBlinking}></span>
                                 <span className={styles.lightgrey}>tocomplete</span>
+                                </span>
                             </span>
                         </h2>
                     </div>

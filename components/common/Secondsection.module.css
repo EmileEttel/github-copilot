@@ -112,3 +112,19 @@
     line-height: 60px;
     font-size: 50px;
 }
+
+.secondSectionQuotesFigure {
+    position: relative;
+}
+
+@media only screen and (max-width: 380px) {
+    .secondSectionTitle { line-height: 36px; font-size: 32px;}
+    .secondSectionSubtitle { line-height: 22px; font-size: 18px;}
+    .secondSectionWhole { flex-direction: column;}
+    .secondSectionButtonDiv { margin-right: 0%; max-width: none; width: 100%;} 
+    .secondSectionQuotesGrid { display: flex; flex-direction: column;}
+    .secondSectionQuotesFigure {margin: 0;}
+    .secondSectionQuotesQuote {line-height: 22px; font-size: 18px;} 
+    .secondSectionQuotesQuotes { line-height: 36px; font-size: 32px;} 
+    .secondSectionQuotesBigQuote {line-height: 30px; font-size: 26px;}
+}

@@ -15,11 +15,11 @@ function FirstSectionTripleEditor() {
                 </div>
             </div>
             <div className={styles.tripleEditorThird}>
-                <div className={styles.thirdTextDiv}>
-                    <EditorTerminal underText='1' height={["457px"]} charsize={[75]} segments={['20']} linenumber={["16"]} info_one={two_info_one} info_two={two_info_two} info_three={two_info_three} tabs={two_tabs} border="rounded" theme="white" />
+                <div className={`${styles.thirdTextDiv} + ${styles.middleDiv}`}>
                     <p className={styles.thirdText}>
                         <span className={styles.thirdTextTitle}>Autofill for repetitive code.</span> GitHub Copilot works great for quickly producing boilerplate and repetitive code patterns. Feed it a few examples and let it generate the rest!
                     </p>
+                    <EditorTerminal underText='1' height={["457px"]} charsize={[75]} segments={['20']} linenumber={["16"]} info_one={two_info_one} info_two={two_info_two} info_three={two_info_three} tabs={two_tabs} border="rounded" theme="white" />
                 </div>
             </div>
             <div className={styles.tripleEditorThird}>

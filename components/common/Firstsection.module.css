@@ -15,9 +15,9 @@
     top: auto;
     bottom: auto;
     width: 4px;
-    top: 12px;
-    height: 77px;
+    height: 100%;
     margin-right: -4px;
+    margin-bottom: -12px;
     margin-top: 4px;
     background-color: rgb(47,54,61);
     z-index: 30;
@@ -85,9 +85,6 @@
     margin: 80px 0;
 }
 
-.tripleEditorThird {
-}
-
 .thirdTextDiv {
     /* h-full flex items-center order-1 md:order-1 md:col-span-4 */
     gap: 80px;
@@ -113,4 +110,23 @@
     align-items: center;
     max-width: 576px;
     height: 100%;
+}
+
+.autocompleteSpan {
+    display: inline-block;
+    white-space: nowrap;
+    height: 77px;
+}
+
+.middleDiv {
+    flex-direction: row-reverse;
+}
+
+@media only screen and (max-width: 380px) {
+    .firstSectionH2 { line-height: 36px; font-size: 32px;}
+    .firstSectionSubtitle { line-height: 24px; font-size: 20px;}
+    .autocompleteSpan {height: 40px;}
+    .middleDiv {flex-direction: column;}
+    .thirdTextDiv {flex-direction: column; }
+    .thirdText{ line-height: 26px; font-size: 22px;}
 }

@@ -1,18 +1,18 @@
 import { useEffect, useState } from "react";
 import EditorTerminal from "./editorTerminal";
 import styles from "./Mac.module.css"
-import { info_one, options, tabs, lines, heights } from "./editorMultipleChoicesContent"
+import {info_one, options, tabs, lines, heights} from "./editorMultipleChoicesContent"
 
 function EditorMultipleChoices() {
     const [option, setOptionNbr] = useState(0)
-    if (option < 0) {
-        setOptionNbr(8);
-    }
-    if (option > 8) {
-        setOptionNbr(0);
-    }
+        if (option < 0) {
+            setOptionNbr(8);
+        }
+        if (option > 8) {
+            setOptionNbr(0);
+        }
     info_one[0][4] = options[option];
-
+    
     return (
         <div className={styles.editorArea}>
             <div className={styles.editorWindow}>
@@ -70,8 +70,8 @@ function EditorMultipleChoices() {
                             </div>
                         </div>
                     </div>
-                    <div style={{ maxWidth: "913px" }}>
-                        <EditorTerminal underText='0' height={[heights[option]]} segments={['0']} linenumber={[lines[option]]} info_one={info_one} info_two={[0]} info_three={[0]} tabs={tabs} border="square" theme="white" />
+                    <div style={{maxWidth: "913px"}}>
+                    <EditorTerminal underText='0' height={[heights[option]]} segments={['0']} linenumber={[lines[option]]} info_one={info_one} info_two={[0]} info_three={[0]} tabs={tabs} border="square" theme="white" />
                     </div>
                 </div>
                 <div className={styles.editorBottomBar}>
