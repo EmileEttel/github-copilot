@@ -122,6 +122,9 @@
     flex-direction: row-reverse;
 }
 
+.editorTripleDiv {
+    width: 70%;
+}
 
 @media only screen and (max-width: 1050px) {
     .firstSectionH2 { line-height: 68px; font-size: 64px;}
@@ -132,6 +135,7 @@
 @media only screen and (max-width: 750px) {
     .middleDiv {flex-direction: column;}
     .thirdTextDiv {flex-direction: column; }
+    .editorTripleDiv {width: 90%;}
     .firstSectionH2 { line-height: 40px; font-size: 36px;}
     .firstSectionSubtitle { line-height: 24px; font-size: 20px;}
     .thirdText{ line-height: 26px; font-size: 22px;}

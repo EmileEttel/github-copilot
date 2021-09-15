@@ -27,6 +27,7 @@ function FirstSection() {
                         GitHub Copilot is powered by Codex, the new AI system created by OpenAI. GitHub Copilot understands significantly more context than most code assistants. So, whether it’s in a docstring, comment, function name, or the code itself, GitHub Copilot uses the context you’ve provided and synthesizes code to match. Together with OpenAI, we’re designing GitHub Copilot to get smarter at producing safe and effective code as developers use it.
                     </p>
                 </div>
+                <div style={{width: "98%"}}>
                 <EditorMac linenumber={[23, ]} info_one={info_one} info_two={info_two} info_three={info_three} tabs={tabs} />
                 <div className={styles.bigTitleDiv}>
                     <h3 className={styles.bigTitle}>Skip the docs and stop searching for exampels. Github Copilot helps you stay focused right in your editor.</h3>
@@ -41,7 +42,10 @@ function FirstSection() {
                         Want to evaluate a few different approaches? GitHub Copilot can show you a list of solutions. Use the code as provided, or edit it to meet your needs.
                     </p>
                 </div>
+                <div style={{width: "90%"}}>
                 <EditorMultipleChoices />
+                </div>
+                </div>
             </div>
         </section>
     )
