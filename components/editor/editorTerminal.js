@@ -20,54 +20,56 @@ function EditorTerminal(props) {
     }, [time])
 
     return (
-        <div className={styles.editor} style={{ height: props.height[tab] }}>
-            <div className={`${colorTheme} + ${borderStyle}`}>
-                <div className={`${exampleTabs} + ${borderStyle}`}>
-                    {props.tabs.map((tabs) => (
-                        <span key={buttonSide}>
-                            {buttonSide++ == 0 &&
-                                <button className={`${buttonClass} + ${styles.sideborders}`} onClick={() => {
-                                    setCurrentTab(tabs.tabnum)
-                                    setTestB(1)
-                                    setTimeLeft(time)
-                                }}>
-                                    <ButtonEditor svgpath={tabs.imgsrc} title={tabs.text} theme={props.theme} />
-                                </button>
-                            }
-                            {buttonSide++ > 1 &&
-                                <button className={`${buttonClass}`} onClick={() => {
-                                    setCurrentTab(tabs.tabnum)
-                                    setTestB(1)
-                                    setTimeLeft(time)
-                                }}>
-                                    <ButtonEditor svgpath={tabs.imgsrc} title={tabs.text} theme={props.theme} />
-                                </button>
-                            }
-                        </span>
-                    ))}
+        <div className={styles.editor} style={{width: props.width}}>
+                <div style={{ height: props.height[tab] }}>
+                <div className={`${colorTheme} + ${borderStyle}`}>
+                    <div className={`${exampleTabs} + ${borderStyle}`}>
+                        {props.tabs.map((tabs) => (
+                            <span key={buttonSide}>
+                                {buttonSide++ == 0 &&
+                                    <button className={`${buttonClass} + ${styles.sideborders}`} onClick={() => {
+                                        setCurrentTab(tabs.tabnum)
+                                        setTestB(1)
+                                        setTimeLeft(time)
+                                    }}>
+                                        <ButtonEditor svgpath={tabs.imgsrc} title={tabs.text} theme={props.theme} />
+                                    </button>
+                                }
+                                {buttonSide++ > 1 &&
+                                    <button className={`${buttonClass}`} onClick={() => {
+                                        setCurrentTab(tabs.tabnum)
+                                        setTestB(1)
+                                        setTimeLeft(time)
+                                    }}>
+                                        <ButtonEditor svgpath={tabs.imgsrc} title={tabs.text} theme={props.theme} />
+                                    </button>
+                                }
+                            </span>
+                        ))}
+                    </div>
+                    <Editor underText={props.underText} theme={props.theme} linenumber={props.linenumber[tab]} info_one={props.info_one[tab]} info_two={props.info_two[tab]} info_three={props.info_three[tab]} letters={time} segments={props.segments[tab]} />
                 </div>
-                <Editor underText={props.underText} theme={props.theme} linenumber={props.linenumber[tab]} info_one={props.info_one[tab]} info_two={props.info_two[tab]} info_three={props.info_three[tab]} letters={time} segments={props.segments[tab]} />
-            </div>
-            {props.underText == 1 && time >= props.charsize[tab] + 20 &&
-                <>
-                    <div className={styles.replayButtonDiv}>
-                        <button onClick={() => setTimeLeft(0)} className={replayButton}>
-                            <div className={styles.replaySvg}>
-                                <img src="/replaylogo.svg" />
-                            </div>
-                            Replay
-                        </button>
-                    </div>
-                    <div className={styles.copilotTagDiv}>
-                        <div className={styles.copilotTagText}>
-                            <div className={styles.copilotTagSvg}>
-                                <img src="/copilottag.svg" />
-                            </div>
-                            Copilot
+                {props.underText == 1 && time >= props.charsize[tab] + 20 &&
+                    <>
+                        <div className={styles.replayButtonDiv}>
+                            <button onClick={() => setTimeLeft(0)} className={replayButton}>
+                                <div className={styles.replaySvg}>
+                                    <img src="/replaylogo.svg" />
+                                </div>
+                                Replay
+                            </button>
                         </div>
-                    </div>
-                </>
-            }
+                        <div className={styles.copilotTagDiv}>
+                            <div className={styles.copilotTagText}>
+                                <div className={styles.copilotTagSvg}>
+                                    <img src="/copilottag.svg" />
+                                </div>
+                                Copilot
+                            </div>
+                        </div>
+                    </>
+                }
+            </div>
         </div>
     )
 }

@@ -10,12 +10,25 @@ function FrequentlyAsked() {
                 </div>
                 <div className={styles.faqWhole}>
                     <div className={styles.faqButtonList}>
+                        <div className={styles.faqButtons}>
+
                         <button className={styles.faqButton}>General</button>
                         <button className={styles.faqButton}>Training Set</button>
                         <button className={styles.faqButton}>Protecting originality</button>
                         <button className={styles.faqButton}>Responsible AI</button>
                         <button className={styles.faqButton}>Telemetry</button>
                         <button className={styles.faqButton}>Availability</button>
+                        </div>
+                    </div>
+                    <div className={styles.faqSelectDiv}>
+                        <select className={styles.faqSelect}>
+                            <option>General</option>
+                            <option>Training Set</option>
+                            <option>Protecting originality</option>
+                            <option>Responsible AI</option>
+                            <option>Telemetry</option>
+                            <option>Availability</option>
+                        </select>
                     </div>
                     <div className={styles.faqAnswers}>
                         <div>

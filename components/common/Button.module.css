@@ -8,7 +8,11 @@
 }
 
 .a {
+    display: flex;
     width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .buttonLight {
@@ -23,7 +27,6 @@
 
 .imgLight, .imgDark {
     position: relative;
-    top: -2px;
     margin: -4px 0;
     transition: transform .2s;
     text-align: center;
@@ -36,10 +39,10 @@
     stroke-dasharray: 10;
     stroke-dashoffset: 10;
     transition: stroke-dashoffset .2s;
-} 
+}
 
 @media only screen and (max-width: 530px) {
-    .buttonLight { width: 80%; }
+    .buttonLight { width: 85%; }
 }
 
 @media only screen and (max-width: 338px) {

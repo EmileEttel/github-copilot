@@ -162,3 +162,7 @@
 @media only screen and (max-width: 1010px) {
     .editor {  font-size: 14px; line-height: 20px;}
 }
+
+@media only screen and (max-width: 630px) {
+    .editor { width: 100%;}
+}

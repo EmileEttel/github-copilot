@@ -117,13 +117,27 @@
     position: relative;
 }
 
-@media only screen and (max-width: 380px) {
-    .secondSectionTitle { line-height: 36px; font-size: 32px;}
-    .secondSectionSubtitle { line-height: 22px; font-size: 18px;}
+.terminalDiv {
+    width: 70%;
+}
+
+@media only screen and (max-width: 1020px) {
     .secondSectionWhole { flex-direction: column;}
     .secondSectionButtonDiv { margin-right: 0%; max-width: none; width: 100%;} 
     .secondSectionQuotesGrid { display: flex; flex-direction: column;}
+    .terminalDiv { width: auto;}
     .secondSectionQuotesFigure {margin: 0;}
+    .secondSectionQuotesGridDiv {margin-left: 0; margin-right: 0; width: 100%;}
+}
+
+@media only screen and (max-width: 1000px) {
+    .secondSectionTitle { line-height: 52px; font-size: 48px;}
+    .secondSectionSubtitle { line-height: 24px; font-size: 20px;}
+}
+
+@media only screen and (max-width: 700px) {
+    .secondSectionTitle { line-height: 36px; font-size: 32px;}
+    .secondSectionSubtitle { line-height: 22px; font-size: 18px;}
     .secondSectionQuotesQuote {line-height: 22px; font-size: 18px;} 
     .secondSectionQuotesQuotes { line-height: 36px; font-size: 32px;} 
     .secondSectionQuotesBigQuote {line-height: 30px; font-size: 26px;}

@@ -37,3 +37,7 @@
 .footerRightA {
     padding: 8px;
 }
+
+@media only screen and (max-width: 770px) {
+    .footerDiv {flex-direction: column-reverse; align-items: center;}
+}

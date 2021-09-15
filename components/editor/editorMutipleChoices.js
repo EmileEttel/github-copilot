@@ -1,18 +1,18 @@
 import { useEffect, useState } from "react";
 import EditorTerminal from "./editorTerminal";
 import styles from "./Mac.module.css"
-import {info_one, options, tabs, lines, heights} from "./editorMultipleChoicesContent"
+import { info_one, options, tabs, lines, heights } from "./editorMultipleChoicesContent"
 
 function EditorMultipleChoices() {
     const [option, setOptionNbr] = useState(0)
-        if (option < 0) {
-            setOptionNbr(8);
-        }
-        if (option > 8) {
-            setOptionNbr(0);
-        }
+    if (option < 0) {
+        setOptionNbr(8);
+    }
+    if (option > 8) {
+        setOptionNbr(0);
+    }
     info_one[0][4] = options[option];
-    
+
     return (
         <div className={styles.editorArea}>
             <div className={styles.editorWindow}>
@@ -22,7 +22,7 @@ function EditorMultipleChoices() {
                     <div className={styles.greenCircle}></div>
                     <div className={styles.editorMacBarText}>Visual Studio Code</div>
                 </div>
-                <div className={styles.editorTextArea}>
+                <div className={styles.editorTextArea} style={{overflowX: "hidden"}}>
                     <div className={styles.editorSidebar}>
                         <div className={styles.editorSidebarTop}>
                             <div>
@@ -62,16 +62,17 @@ function EditorMultipleChoices() {
                                     <span>Previous</span>
                                     <span className={styles.multipleChoicesChar}>⌥]</span>
                                 </button>
-                                <div className={styles.multipleChoicesDivider} />
-                                <button className={styles.multipleChoicesButton}>
+                                <div className={`${styles.multipleChoicesDivider} + ${styles.hideWhenSmall}`} />
+                                <button className={`${styles.multipleChoicesButton} + ${styles.hideWhenSmall}`}>
                                     <span>Accept</span>
                                     <span className={styles.multipleChoicesChar}>Tab</span>
                                 </button>
                             </div>
                         </div>
                     </div>
-                    <div style={{maxWidth: "913px"}}>
-                    <EditorTerminal underText='0' height={[heights[option]]} segments={['0']} linenumber={[lines[option]]} info_one={info_one} info_two={[0]} info_three={[0]} tabs={tabs} border="square" theme="white" />
+                    <div style={{ maxWidth: "97%" }}>
+                        <EditorTerminal underText='0' height={[heights[option]]} segments={['0']} linenumber={[lines[option]]} info_one={info_one} info_two={[0]} info_three={[0]} tabs={tabs} border="square" theme="white" width="auto" />
+
                     </div>
                 </div>
                 <div className={styles.editorBottomBar}>

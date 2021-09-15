@@ -182,3 +182,12 @@
     border: 1px solid rgba(0,0,0,0.1);
     border-radius: 6px;
 }
+
+.hideWhenSmall {
+
+}
+
+@media only screen and (max-width: 750px) {
+    .hideWhenSmall {display: none;}
+    
+}

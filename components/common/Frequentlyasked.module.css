@@ -16,12 +16,16 @@
 }
 
 .faqButtonList {
-    display: flex;
-    flex-direction: column;
     top: 16px;
     width: 168px;
-    position: sticky;
     margin-right: 48px;
+}
+
+.faqButtons {
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 16px;
 }
 
 .faqButton {
@@ -71,9 +75,28 @@
     display: flex;
 }
 
-@media only screen and (max-width: 380px) {
+.faqSelectDiv {
+    display: none;
+    margin-bottom: 32px;
+}
+
+.faqSelect {
+    background-color: white;
+    text-align: left;
+    border: solid 1px black;
+    line-height: 20px;
+    font-size: 16px;
+    padding: 8px 40px 8px 12px;
+}
+
+@media only screen and (max-width: 1020px){
+    .faqAnswers {display: flex; flex-direction: column;}
+    .faqTitle {line-height: 52px; font-size: 48px;}
+}
+
+@media only screen and (max-width: 770px) {
     .faqTitle {line-height: 36px; font-size: 32px;}
     .faqWhole {flex-direction: column;}
-    .faqButtonList {position: relative;}
-    .faqAnswers {display: flex; flex-direction: column;}
+    .faqButtonList {display: none;}
+    .faqSelectDiv {display: block;}
 }

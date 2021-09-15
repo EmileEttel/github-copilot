@@ -43,7 +43,9 @@ function SecondSection() {
                                 <div className={styles.secondSectionButtonText}>Goodreads rating</div>
                             </button>
                         </div>
-                        <EditorTerminal underText={1} height={heights} charsize={charsizes} linenumber={lines} info_one={info_one} info_two={info_two} info_three={info_three} tabs={tabs} segments={segments} />
+                        <div className={styles.terminalDiv}>
+                            <EditorTerminal underText={1} height={heights} charsize={charsizes} linenumber={lines} info_one={info_one} info_two={info_two} info_three={info_three} tabs={tabs} segments={segments} />
+                        </div>
                     </div>
                 </div>
             </div>
