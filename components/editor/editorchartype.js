@@ -1,5 +1,4 @@
-
-export default function EditorChartype(tab, setCurrentTab, time, setTimeLeft, test, setTestB, selectTab, setSelectTab, props) {
+export default function EditorChartype(tab, setCurrentTab, time, setTimeLeft, test, setTestB, selectTab, setSelectTab, props, exception, setException) {
     if (test == 0 && props.charsize && time < props.charsize[tab] + 20) {
         setTimeout(() => {
             setTimeLeft(time + 1);
@@ -16,5 +15,8 @@ export default function EditorChartype(tab, setCurrentTab, time, setTimeLeft, te
             setTimeLeft(0);
         }
         setTestB(0);
-    }   
+    }  
+    if (exception == 1) {
+        setException(0);
+    }
 }

@@ -15,9 +15,10 @@ function EditorTerminal(props) {
     const [time, setTimeLeft] = useState(0);
     const [test, setTestB] = useState(0);
     const [selectTab, setSelectTab] = useState(0);
+    const [exception, setException] = useState(0);
     useEffect(() => {
-        EditorChartype(tab, setCurrentTab, time, setTimeLeft, test, setTestB, selectTab, setSelectTab, props);
-    }, [time])
+        EditorChartype(tab, setCurrentTab, time, setTimeLeft, test, setTestB, selectTab, setSelectTab, props, exception, setException);
+    }, [time, exception])
 
     return (
         <div className={styles.editor} style={{width: props.width}}>
@@ -30,7 +31,9 @@ function EditorTerminal(props) {
                                     <button className={`${buttonClass} + ${styles.sideborders}`} onClick={() => {
                                         setCurrentTab(tabs.tabnum)
                                         setTestB(1)
-                                        setTimeLeft(time)
+                                        {time >= props.charsize[tab] + 20 &&
+                                            setException(1)                                            
+                                        }
                                     }}>
                                         <ButtonEditor svgpath={tabs.imgsrc} title={tabs.text} theme={props.theme} />
                                     </button>
@@ -39,7 +42,9 @@ function EditorTerminal(props) {
                                     <button className={`${buttonClass}`} onClick={() => {
                                         setCurrentTab(tabs.tabnum)
                                         setTestB(1)
-                                        setTimeLeft(time)
+                                        {time >= props.charsize[tab] + 20 &&
+                                            setException(1)                                            
+                                        }
                                     }}>
                                         <ButtonEditor svgpath={tabs.imgsrc} title={tabs.text} theme={props.theme} />
                                     </button>
